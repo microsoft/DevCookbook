@@ -1,3 +1,3 @@
 # DevCookbook
 
-> The Cookbook for Develoers!
+> The Cookbook for Developers!
