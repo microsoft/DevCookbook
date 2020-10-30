@@ -33,6 +33,9 @@
 
     /* Text */
     --text-primary: var(--neutral-90);
+
+    /* Shadow */
+    --shadow: var(--neutral-60) 0px 0.25rem 0.5rem;
 }
 
 /* Globals */
@@ -49,6 +52,48 @@ html {
 
 ::-moz-selection {
     background: var(--green-onion);
+}
+
+.section-splash {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr;
+    grid-template-rows: 1rem 20rem 1fr 1fr;
+}
+
+.section-splash > .section-splash-image {
+    box-shadow: var(--shadow);
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+    border-radius: 1rem;
+    grid-column: 2 / 3;
+    grid-row: 2 / 5;
+}
+
+.section-splash > .section-splash-text {
+    color: var(--neutral-4);
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+}
+
+.section-splash > .section-splash-background {
+    background-color: var(--neutral-60);
+    grid-column: 1 / 5;
+    grid-row: 1 / 3;
+    z-index: -10;
+}
+
+.section-splash h2 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+.section-splash p {
+    max-width: 50ch;
+}
+
+.section-splash > div {
+    padding: 2rem;
 }
 
 hr {
@@ -150,6 +195,10 @@ section.table-of-contents > * {
 }
 
 /* Appetizers */
+
+.appetizers .section-splash-background {
+    background-color: var(--tomato);
+}
 
 /* Entrees */
 
