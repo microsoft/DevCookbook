@@ -1,9 +1,4 @@
 from jinja2 import Environment, PackageLoader, select_autoescape
-
-import sys
-
-print(sys.path)
-
 from recipe_compiler.read import read_recipe_file
 from recipe_compiler.parse import parse_to_recipe
 from recipe_compiler.render import render_home_page, render_recipe_page
