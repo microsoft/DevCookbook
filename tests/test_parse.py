@@ -1,4 +1,4 @@
-from recipe_compiler.parsing import parse_content, render_recipe_name
+from recipe_compiler.parse import parse_markdown, get_recipe_name
 
 
 def test_render_recipe_name():
@@ -16,7 +16,7 @@ def test_render_recipe_name():
 """
 
     # When
-    actual_recipe_name = render_recipe_name(parse_content(source))
+    actual_recipe_name = get_recipe_name(parse_markdown(source))
 
     # Then
     assert recipe_name == actual_recipe_name
@@ -37,7 +37,7 @@ def test_render_quote():
 """
 
     # When
-    actual_quote = render_recipe_name(parse_content(source))
+    actual_quote = get_recipe_name(parse_markdown(source))
 
     # Then
     assert quote == actual_quote
