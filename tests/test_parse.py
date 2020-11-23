@@ -1,11 +1,14 @@
-from recipe_compiler.parse import parse_markdown, get_recipe_name
+from recipe_compiler.parse import get_recipe_name
+
+import marko
 
 
-def test_render_recipe_name():
+def test_get_recipe_name():
     # Given
     recipe_name = "Recipe name"
 
-    source = f"""# {recipe_name}
+    source = marko.parse(
+        f"""# {recipe_name}
 
 > [Quote]
 
@@ -14,30 +17,10 @@ def test_render_recipe_name():
 ## Instructions
 
 """
+    )
 
     # When
-    actual_recipe_name = get_recipe_name(parse_markdown(source))
+    actual_recipe_name = get_recipe_name(source)
 
     # Then
     assert recipe_name == actual_recipe_name
-
-
-def test_render_quote():
-    # Given
-    quote = "This is the quote I am looking for."
-
-    source = f"""# Recipe name
-
-> {quote}
-
-## Ingredients
-
-## Instructions
-
-"""
-
-    # When
-    actual_quote = get_recipe_name(parse_markdown(source))
-
-    # Then
-    assert quote == actual_quote
