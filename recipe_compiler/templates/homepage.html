@@ -4,6 +4,7 @@
         <h1><strong>Open Source</strong> Kitchen</h1>
     </header>
     <section class="introduction" id="introduction">
+        <img src="/illustrations/Bowl_Spice@300x.png" alt="" />
         <h2>Introduction</h2>
         <p>
             Food recipes, just like software code, require testing. In the
@@ -41,84 +42,92 @@
         </p>
     </section>
     <section class="table-of-contents">
-        <h2>Table of Contents</h2>
-        <hr />
-        <div class="chapters">
-            <div class="chapter-column">
-                <div class="chapter">
-                    <span class="chapter-number">00</span>
-                    <div class="chapter-description">
-                        <h3><a href="#introduction">Introduction</a></h3>
+        <img src="/illustrations/Tomato_bunch@300x.png" alt="" />
+        <div>
+            <h2>Table of Contents</h2>
+            <hr />
+            <div class="chapters">
+                <div class="chapter-column">
+                    <div class="chapter">
+                        <span class="chapter-number">00</span>
+                        <div class="chapter-description">
+                            <h3><a href="#introduction">Introduction</a></h3>
+                        </div>
+                    </div>
+                    <div class="chapter">
+                        <span class="chapter-number">01</span>
+                        <div class="chapter-description">
+                            <h3><a href="#appetizers">Appetizers</a></h3>
+                            <ol>
+                                {% for appetizer in
+                                recipes_by_category["appetizer"]%}
+                                <li>
+                                    <a href="/{{ appetizer.slug }}"
+                                        >{{ appetizer.recipe_name }}</a
+                                    >
+                                </li>
+                                {% endfor %}
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="chapter">
+                        <span class="chapter-number">02</span>
+                        <div class="chapter-description">
+                            <h3><a href="#entrees">Entrees</a></h3>
+                            <ol>
+                                {% for entree in recipes_by_category["entree"]%}
+                                <li>
+                                    <a href="/{{ entree.slug }}"
+                                        >{{ entree.recipe_name }}</a
+                                    >
+                                </li>
+                                {% endfor %}
+                            </ol>
+                        </div>
                     </div>
                 </div>
-                <div class="chapter">
-                    <span class="chapter-number">01</span>
-                    <div class="chapter-description">
-                        <h3><a href="#appetizers">Appetizers</a></h3>
-                        <ol>
-                            {% for appetizer in
-                            recipes_by_category["appetizer"]%}
-                            <li>
-                                <a href="/{{ appetizer.slug }}"
-                                    >{{ appetizer.recipe_name }}</a
-                                >
-                            </li>
-                            {% endfor %}
-                        </ol>
+                <div class="chapter-column">
+                    <div class="chapter">
+                        <span class="chapter-number">03</span>
+                        <div class="chapter-description">
+                            <h3><a href="#desserts">Desserts</a></h3>
+                            <ol>
+                                {% for dessert in
+                                recipes_by_category["dessert"]%}
+                                <li>
+                                    <a href="/{{ dessert.slug }}"
+                                        >{{ dessert.recipe_name }}</a
+                                    >
+                                </li>
+                                {% endfor %}
+                            </ol>
+                        </div>
                     </div>
-                </div>
-                <div class="chapter">
-                    <span class="chapter-number">02</span>
-                    <div class="chapter-description">
-                        <h3><a href="#entrees">Entrees</a></h3>
-                        <p>Aximpos utem ut quam dolupta quidus, quam</p>
-                        <ol>
-                            <li>Lum ellabor si omnis</li>
-                            <li>Magnam, con plaboratur</li>
-                            <li>Lissitio rehendunt</li>
-                            <li>Nes ulparch icimus</li>
-                            <li>Onsequo is repudios</li>
-                        </ol>
+                    <div class="chapter">
+                        <span class="chapter-number">04</span>
+                        <div class="chapter-description">
+                            <h3><a href="#others">Others</a></h3>
+                            <ol>
+                                {% for other in recipes_by_category["other"]%}
+                                <li>
+                                    <a href="/{{ other.slug }}"
+                                        >{{ other.recipe_name }}</a
+                                    >
+                                </li>
+                                {% endfor %}
+                            </ol>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="chapter-column">
-                <div class="chapter">
-                    <span class="chapter-number">03</span>
-                    <div class="chapter-description">
-                        <h3><a href="#desserts">Desserts</a></h3>
-                        <ol>
-                            {% for dessert in
-                            recipes_by_category["dessert"]%}
-                            <li>
-                                <a href="/{{ dessert.slug }}"
-                                    >{{ dessert.recipe_name }}</a
-                                >
-                            </li>
-                            {% endfor %}
- 
-                    </div>
-                </div>
-                <div class="chapter">
-                    <span class="chapter-number">04</span>
-                    <div class="chapter-description">
-                        <h3><a href="#others">Others</a></h3>
-                        <p>Aximpos utem ut quam dolupta quidus, quam</p>
-                        <ol>
-                            <li>Vent perit aceritibus alique</li>
-                            <li>Qui dust volores tiusam</li>
-                        </ol>
-                    </div>
-                </div>
-                <div class="chapter">
-                    <span class="chapter-number">05</span>
-                    <div class="chapter-description">
-                        <h3><a href="#resources">Resources</a></h3>
-                        <p>Aximpos utem ut quam dolupta quidus, quam</p>
+                    <div class="chapter">
+                        <span class="chapter-number">05</span>
+                        <div class="chapter-description">
+                            <h3><a href="#resources">Resources</a></h3>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <img src="/illustrations/Yellow_chilli_pepper@300x.png" alt="" />
     </section>
     <section class="appetizers" id="appetizers">
         <header class="section-splash">
