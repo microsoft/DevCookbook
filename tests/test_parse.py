@@ -17,7 +17,7 @@ SOURCE_TEXT = f"""# Recipe name
 - Ingredient 1
 - Ingredient 2
 
-## Instructions
+## Directions
 
 1. Instruction 1
 2. Instruction 2

@@ -14,7 +14,7 @@ category: dessert
 - Flour
 - 1 tbsp. cold water
 
-## Instructions
+## Directions
 
 1. Mix it all together
 2. Really mix it, pal

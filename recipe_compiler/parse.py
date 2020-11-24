@@ -87,7 +87,7 @@ def get_instructions(document: Document) -> list[str]:
         list[str]: A list of instructions from the document
     """
 
-    return get_list_within_section(document, "Instructions")
+    return get_list_within_section(document, "Directions")
 
 
 def parse_to_recipe(content: str) -> Recipe:
