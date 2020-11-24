@@ -27,4 +27,13 @@ def render_home_page(recipes: list[Recipe], env: Environment) -> str:
         str: HTML home page with links to all recipes
     """
 
-    return env.get_template("homepage.html").render(recipes=recipes)
+    recipes_by_category = {}
+    for recipe in recipes:
+        if recipe.category in recipes_by_category.keys():
+            recipes_by_category[recipe.category.value].append(recipe)
+        else:
+            recipes_by_category[recipe.category.value] = [recipe]
+
+    return env.get_template("homepage.html").render(
+        recipes_by_category=recipes_by_category
+    )

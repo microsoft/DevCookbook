@@ -16,7 +16,7 @@
             The similarities between food and code also work the other way. We
             call code that is difficult to read spaghetti code. We are
             encouraged to eat our own code, which means using it ourselves as a
-            way to test it. Code that doesn’t work is half-baked. A sample code
+            way to test it. Code that doesn't work is half-baked. A sample code
             fragment is called a recipe and collections of coding recipes are
             known as cookbooks, like The JavaScript Cookbook by Shelly Powers
             and The C# Cookbook by Jay Hilyard.
@@ -25,7 +25,7 @@
             Open source software has a particular indebtedness to the food
             world. As with food recipes, having lots of people review your code
             only makes it stronger and more reliable. This is the premise of
-            Linus’s Law, which promotes the idea that a key benefit of open
+            Linus's Law, which promotes the idea that a key benefit of open
             source over closed source software is that it gets more eyes and is
             more likely to get seen by those who can find and resolve bugs in
             the codebase.
@@ -34,7 +34,7 @@
             <strong>
                 In the tradition of open source, the authors of the chapters in
                 this cookbook are giving back to the community by sharing
-                favorite recipes – free, online, and downloadable. Enjoy
+                favorite recipes - free, online, and downloadable. Enjoy
                 appetizers, entrees, and desserts from around the world,
                 courtesy of our global developer community!
             </strong>
@@ -49,17 +49,21 @@
                     <span class="chapter-number">00</span>
                     <div class="chapter-description">
                         <h3><a href="#introduction">Introduction</a></h3>
-                        <p>Aximpos utem ut quam dolupta quidus, quam</p>
                     </div>
                 </div>
                 <div class="chapter">
                     <span class="chapter-number">01</span>
                     <div class="chapter-description">
                         <h3><a href="#appetizers">Appetizers</a></h3>
-                        <p>Aximpos utem ut quam dolupta quidus, quam</p>
                         <ol>
-                            <li>Vent perit aceritibus alique</li>
-                            <li>Qui dust volores tiusam</li>
+                            {% for appetizer in
+                            recipes_by_category["appetizer"]%}
+                            <li>
+                                <a href="/{{ appetizer.slug }}"
+                                    >{{ appetizer.recipe_name }}</a
+                                >
+                            </li>
+                            {% endfor %}
                         </ol>
                     </div>
                 </div>
@@ -83,13 +87,16 @@
                     <span class="chapter-number">03</span>
                     <div class="chapter-description">
                         <h3><a href="#desserts">Desserts</a></h3>
-                        <p>Aximpos utem ut quam dolupta quidus, quam</p>
                         <ol>
-                            <li>Vent perit aceritibus alique</li>
-                            <li>Qui dust volores tiusam</li>
-                            <li>At vendele ndipsan tesenis</li>
-                            <li>Quia veliquatures veniente</li>
-                        </ol>
+                            {% for dessert in
+                            recipes_by_category["dessert"]%}
+                            <li>
+                                <a href="/{{ dessert.slug }}"
+                                    >{{ dessert.recipe_name }}</a
+                                >
+                            </li>
+                            {% endfor %}
+ 
                     </div>
                 </div>
                 <div class="chapter">
