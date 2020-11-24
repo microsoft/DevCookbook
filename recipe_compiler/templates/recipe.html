@@ -1,18 +1,29 @@
 {% extends "index.html" %} {% block content %}
-<pre>
+<nav>
+    <span><strong>Open Source</strong> Kitchen</span>
+</nav>
+<section class="recipe">
     <h1>{{ recipe.recipe_name }}</h1>
     <div>{{ recipe.name }}</div>
     <div>{{ recipe.residence }}</div>
     <blockquote>{{ recipe.quote }}</blockquote>
-    <ul>
-        {% for ingredient in recipe.ingredients %}
-        <li>{{ ingredient }}</li>
-        {% endfor %}
-    </ul>
-    <ol>
-        {% for instruction in recipe.instructions %}
-        <li>{{ instruction }}</li>
-        {% endfor %}
-    </ol>
-</pre>
+    <div class="lists">
+        <div class="ingredients">
+            <h2>Ingredients</h2>
+            <ul>
+                {% for ingredient in recipe.ingredients %}
+                <li>{{ ingredient }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="directions">
+            <h2>Directions</h2>
+            <ol>
+                {% for instruction in recipe.instructions %}
+                <li>{{ instruction }}</li>
+                {% endfor %}
+            </ol>
+        </div>
+    </div>
+</section>
 {% endblock content %}
