@@ -1,9 +1,10 @@
-from marko.block import Document
+from marko.block import Document, Heading, List, Quote
 from recipe_compiler.recipe import Recipe
 from recipe_compiler.recipe_category import RecipeCategory
 
 import marko
 import frontmatter
+from marko.inline import RawText
 
 
 def get_recipe_name(document: Document) -> str:
@@ -17,7 +18,7 @@ def get_recipe_name(document: Document) -> str:
     """
 
     for node in document.children:
-        if node.level == 1:
+        if type(node) is Heading and node.level == 1:
             return node.children[0].children
 
 
@@ -31,15 +32,62 @@ def get_quote(document: Document) -> str:
         str: The content of the first quote tag in the document
     """
 
-    return ""
+    for node in document.children:
+        if type(node) is Quote:
+            return "\n".join(
+                text.children
+                for text in node.children[0].children
+                if type(text) is RawText
+            )
+
+
+def get_list_within_section(document: Document, header: str) -> list[str]:
+    """Returns a list nested within a section defined by the header string
+
+    Args:
+        document (Document): A Marko Markdown Document object
+        section (str): The string of a header defining a given section
+
+    Returns:
+        list[str]: A list of items within the given section
+    """
+
+    is_within_section = False
+
+    for node in document.children:
+        if type(node) is Heading:
+            if node.children[0].children == header:
+                is_within_section = True
+            else:
+                is_within_section = False
+        if type(node) is List and is_within_section:
+            return [item.children[0].children[0].children for item in node.children]
 
 
 def get_ingredients(document: Document) -> list[str]:
-    return [""]
+    """Returns the list of ingredients from the recipe document
+
+    Args:
+        document (Document): A Marko Markdown Document object
+
+    Returns:
+        list[str]: A list of ingredients from the document
+    """
+
+    return get_list_within_section(document, "Ingredients")
 
 
 def get_instructions(document: Document) -> list[str]:
-    return [""]
+    """Returns the list of instructions from the recipe document
+
+    Args:
+        document (Document): A Marko Markdown Document object
+
+    Returns:
+        list[str]: A list of instructions from the document
+    """
+
+    return get_list_within_section(document, "Instructions")
 
 
 def parse_to_recipe(content: str) -> Recipe:
