@@ -1,3 +1,6 @@
+import os
+
+
 def write_home_page(home_page: str):
     """Writes the home_page HTML to file
 
@@ -18,5 +21,8 @@ def write_recipe_page(recipe_slug: str, recipe_page: str):
 
     assert recipe_slug != "index"
 
-    with open(f"./site/{recipe_slug}.html", "w+") as f:
+    if not os.path.exists(f"./site/{recipe_slug}"):
+        os.makedirs(f"./site/{recipe_slug}")
+
+    with open(f"./site/{recipe_slug}/index.html", "w+") as f:
         f.write(recipe_page)
