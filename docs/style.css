@@ -46,6 +46,10 @@ html {
     color: var(--text-primary);
 }
 
+img {
+    width: 100%;
+}
+
 ::selection {
     background: var(--green-onion);
 }
@@ -125,6 +129,19 @@ p {
     margin-bottom: 1.5rem;
 }
 
+blockquote {
+    quotes: "“" "”" "‘" "’";
+    font-family: "Times New Roman", Times, serif;
+}
+
+blockquote::before {
+    content: open-quote;
+}
+
+blockquote::after {
+    content: close-quote;
+}
+
 /* Header */
 
 header {
@@ -150,15 +167,20 @@ section.introduction > * {
     grid-column: 2;
 }
 
+section.introduction > img {
+    max-width: 20rem;
+    margin: auto;
+}
+
 /* Table of contents */
 
 section.table-of-contents {
     display: grid;
-    grid-template-columns: 1fr min(60rem, 100%) 1fr;
-}
-
-section.table-of-contents > * {
-    grid-column: 2;
+    grid-template-columns: 1fr min(50rem, 100%) 1fr;
+    gap: 1rem;
+    max-width: 100rem;
+    margin: auto;
+    padding: 0 1rem;
 }
 
 .chapters {
@@ -207,3 +229,24 @@ section.table-of-contents > * {
 /* Others */
 
 /* Resources */
+
+/* Recipe */
+
+section.recipe {
+    display: grid;
+    grid-template-columns: 1fr min(60rem, 100%) 1fr;
+    margin-bottom: 5rem;
+}
+
+section.recipe > * {
+    grid-column: 2;
+}
+
+.recipe blockquote {
+    font-size: 4rem;
+}
+
+.recipe > .lists {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
