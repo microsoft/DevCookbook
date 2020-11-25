@@ -31,3 +31,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: Compile the site
         run: python3 compile.py --target prod
+
+      - name: Git Auto Commit
+        uses: stefanzweifel/git-auto-commit-action@v4.7.2
