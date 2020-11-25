@@ -25,6 +25,9 @@ jobs:
           # The target architecture (x86, x64) of the Python interpreter.
           architecture: x64
 
+      - name: Install dependencies
+        run: python3 -m pip install -r requirements.txt
+
       # Runs a single command using the runners shell
       - name: Compile the site
         run: python3 compile.py --target prod
