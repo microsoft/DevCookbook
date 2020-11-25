@@ -10,4 +10,4 @@ category: {appetizer, entrée, dessert, other}
 
 ## Ingredients
 
-## Instructions
+## Directions
