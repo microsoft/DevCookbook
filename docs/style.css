@@ -26,6 +26,8 @@
     --neutral-90: #202020;
     --neutral-100: #000000;
 
+    --background: #f5f5f4;
+
     /* Colors */
     --tomato: #ef3742;
     --onion: #9c7691;
@@ -44,6 +46,7 @@ html {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-size: 16px;
     color: var(--text-primary);
+    background-color: var(--background);
 }
 
 img {
@@ -56,48 +59,6 @@ img {
 
 ::-moz-selection {
     background: var(--green-onion);
-}
-
-.section-splash {
-    display: grid;
-    grid-template-columns: 1fr 1fr 2fr 1fr;
-    grid-template-rows: 1rem 20rem 1fr 1fr;
-}
-
-.section-splash > .section-splash-image {
-    box-shadow: var(--shadow);
-    width: 100%;
-    height: 30rem;
-    object-fit: cover;
-    border-radius: 1rem;
-    grid-column: 2 / 3;
-    grid-row: 2 / 5;
-}
-
-.section-splash > .section-splash-text {
-    color: var(--neutral-4);
-    grid-column: 3 / 4;
-    grid-row: 1 / 3;
-}
-
-.section-splash > .section-splash-background {
-    background-color: var(--neutral-60);
-    grid-column: 1 / 5;
-    grid-row: 1 / 3;
-    z-index: -10;
-}
-
-.section-splash h2 {
-    font-size: 5rem;
-    margin-bottom: 1rem;
-}
-
-.section-splash p {
-    max-width: 50ch;
-}
-
-.section-splash > div {
-    padding: 2rem;
 }
 
 hr {
@@ -129,9 +90,13 @@ p {
     margin-bottom: 1.5rem;
 }
 
+ol {
+    padding-inline-start: 1rem;
+}
+
 blockquote {
     quotes: "“" "”" "‘" "’";
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Cooper Black", "Times New Roman", Times, serif;
 }
 
 blockquote::before {
@@ -142,51 +107,100 @@ blockquote::after {
     content: close-quote;
 }
 
-/* Header */
-
-header {
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-    margin-bottom: 5rem;
+a {
+    text-decoration: none;
+    color: var(--text-primary);
 }
 
-header h1 {
+a:hover {
+    color: var(--onion);
+}
+/* Header */
+
+body > header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+body > header h1 {
     font-size: 5rem;
+    margin-bottom: 2rem;
+}
+
+body > header img {
+    max-width: 20rem;
+    margin: auto;
+}
+
+/* Section headers */
+
+section {
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+section > header {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+section > header h2 {
+    font-size: 4rem;
+}
+
+section > header > img {
+    max-width: 20rem;
+    padding: 2rem;
+    justify-self: center;
+    align-self: center;
+}
+
+section > header > div {
+    padding: 1rem;
+}
+
+section > header > div > span,
+section > header > div > p {
+    padding-left: 0.2rem;
 }
 
 /* Introduction */
 
 section.introduction {
-    display: grid;
-    grid-template-columns: 1fr min(65ch, 100%) 1fr;
-    margin-bottom: 5rem;
-}
-
-section.introduction > * {
-    grid-column: 2;
-}
-
-section.introduction > img {
-    max-width: 20rem;
+    max-width: 65ch;
+    padding: 0 1rem;
     margin: auto;
+    margin-bottom: 2rem;
+}
+
+section.introduction > span {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+section.introduction img {
+    width: 8rem;
 }
 
 /* Table of contents */
 
 section.table-of-contents {
-    display: grid;
-    grid-template-columns: 1fr min(50rem, 100%) 1fr;
-    gap: 1rem;
-    max-width: 100rem;
+    max-width: 60rem;
     margin: auto;
     padding: 0 1rem;
 }
 
 .chapters {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(20ch, 1fr));
+    column-gap: 1rem;
 }
 
 .chapter {
@@ -203,32 +217,39 @@ section.table-of-contents {
     margin-bottom: 0.5rem;
 }
 
-.chapter a {
-    text-decoration: none;
-    color: var(--text-primary);
-}
-
-.chapter a:hover {
-    color: var(--onion);
-}
-
 .chapter li {
     margin-bottom: 0.25rem;
 }
 
-/* Appetizers */
+/* Recipe Cards */
 
-.appetizers .section-splash-background {
-    background-color: var(--tomato);
+.recipe-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+    max-width: 80rem;
+    margin: auto;
+    padding: 1rem;
 }
 
-/* Entrees */
+.recipe-card > h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.2rem;
+}
 
-/* Desserts */
+.recipe-card > hr {
+    margin-bottom: 0.2rem;
+}
 
-/* Others */
+.recipe-card > div {
+    display: flex;
+    flex-direction: column;
+}
 
-/* Resources */
+.recipe-card .name,
+.recipe-card .residence {
+    font-weight: 500;
+    color: var(--neutral-80);
+}
 
 /* Recipe */
 
