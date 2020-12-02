@@ -37,3 +37,13 @@ def render_home_page(recipes: list[Recipe], env: Environment) -> str:
     return env.get_template("homepage.html").render(
         recipes_by_category=recipes_by_category
     )
+
+
+def render_contribute_page(env: Environment) -> str:
+    """Formats an HTML page to teach users how to contribute recipies
+
+    Returns:
+        str: HTML contribution page
+    """
+
+    return env.get_template("contribute.html").render()
