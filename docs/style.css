@@ -1,3 +1,7 @@
+/* Import Castoro */
+
+@import url("https://fonts.googleapis.com/css2?family=Castoro:ital@1&display=swap");
+
 /* Unset values */
 
 *,
@@ -53,6 +57,12 @@ img {
     width: 100%;
 }
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.25rem 1rem;
+}
+
 ::selection {
     background: var(--green-onion);
 }
@@ -96,7 +106,7 @@ ol {
 
 blockquote {
     quotes: "“" "”" "‘" "’";
-    font-family: "Cooper Black", "Times New Roman", Times, serif;
+    font-family: "Castoro", "Times New Roman", Times, serif;
 }
 
 blockquote::before {
@@ -115,6 +125,7 @@ a {
 a:hover {
     color: var(--onion);
 }
+
 /* Header */
 
 body > header {
@@ -136,6 +147,12 @@ body > header img {
     margin: auto;
 }
 
+.call-to-action {
+    font-family: "Castoro", "Times New Roman", Times, serif;
+    font-size: 2rem;
+    text-decoration: underline;
+}
+
 /* Section headers */
 
 section {
@@ -152,10 +169,11 @@ section > header {
 
 section > header h2 {
     font-size: 4rem;
+    margin-bottom: 0.3rem;
 }
 
 section > header > img {
-    max-width: 20rem;
+    max-width: 16rem;
     padding: 2rem;
     justify-self: center;
     align-self: center;
@@ -167,6 +185,8 @@ section > header > div {
 
 section > header > div > span,
 section > header > div > p {
+    font-weight: 500;
+    color: var(--neutral-60);
     padding-left: 0.2rem;
 }
 
@@ -254,20 +274,43 @@ section.table-of-contents {
 /* Recipe */
 
 section.recipe {
-    display: grid;
-    grid-template-columns: 1fr min(60rem, 100%) 1fr;
-    margin-bottom: 5rem;
+    max-width: 50rem;
+    margin: 3rem auto;
+    padding: 0 0.5rem;
 }
 
-section.recipe > * {
-    grid-column: 2;
+section.recipe .illustration {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+section.recipe img {
+    max-width: 18rem;
+}
+
+section.recipe > h1 {
+    font-weight: 500;
+    font-size: 4rem;
+}
+
+section.recipe > .credit {
+    font-weight: 500;
+    color: var(--neutral-60);
+    margin-bottom: 2rem;
 }
 
 .recipe blockquote {
-    font-size: 4rem;
+    font-size: 2rem;
+    margin-bottom: 2rem;
 }
 
 .recipe > .lists {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
+    gap: 1rem;
+}
+
+.lists h2 {
+    margin-bottom: 0.5rem;
 }
