@@ -6,16 +6,22 @@ category: dessert
 
 # Pie Shell Script
 
-> Nothing provides a better environment for your code.
+> The perfect shell is as important for pie as it is for code.
 
 ## Ingredients
 
-- Butter
-- Flour
-- 1 tbsp. cold water
+- 300 g all purpose flour
+- 5/8 tsp salt
+- 175 g cold butter
+- 2 tbsp. cold water
 
 ## Directions
 
-1. Mix it all together
-2. Really mix it, pal
-3. Mix it all together and you know you've got the best of both worlds
+1. Stir together flour and salt.
+2. Cut cold butter into pea-sized pieces (or use a cheese grater) and mix thoroughly into the dry ingredients.
+3. Sprinkle 1 to 2 tbsp. cold water over part of the mixture, gently toss with a fork.
+4. Form the mixture into a ball and place on a lightly floured surface.
+5. Using a rolling pin, flatten from center to edges until the dough is 12 inches (30 cm) in diameter.
+6. Carefully transfer the dough to a 9 inch (22 cm) pie plate.
+7. Crimp the edge of the dough as desired.
+8. Fill the shell with a pie filling of your choice!
