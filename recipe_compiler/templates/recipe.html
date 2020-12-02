@@ -1,11 +1,17 @@
 {% extends "index.html" %} {% block content %}
 <nav>
-    <span><strong>Open Source</strong> Kitchen</span>
+    <a href="/"><strong>Open Source</strong> Kitchen</a>
+    <a href="">Contribute a recipe!</a>
 </nav>
 <section class="recipe">
+    <div class="illustration">
+        <img src="illustrations/{{ recipe.category.value }}.png" alt="" />
+    </div>
     <h1>{{ recipe.recipe_name }}</h1>
-    <div>{{ recipe.name }}</div>
-    <div>{{ recipe.residence }}</div>
+    <div class="credit">
+        {% if recipe.name %} Submitted by {{ recipe.name }} {% endif %} {% if
+        recipe.residence %} from {{ recipe.residence }} {% endif %}
+    </div>
     <blockquote>{{ recipe.quote }}</blockquote>
     <div class="lists">
         <div class="ingredients">
