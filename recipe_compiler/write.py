@@ -12,17 +12,18 @@ def write_home_page(home_page: str):
         f.write(home_page)
 
 
-def write_recipe_page(recipe_slug: str, recipe_page: str):
-    """Writes the recipe_page HTML to file
+def write_page(slug: str, page: str):
+    """Writes the page HTML to `/{slug}/index.html`
 
     Args:
-        recipe_page (str): A string of HTML to be written to file
+        slug (str):
+        page (str): A string of HTML to be written to file
     """
 
-    assert recipe_slug != "index"
+    assert slug != "index"
 
-    if not os.path.exists(f"./docs/{recipe_slug}"):
-        os.makedirs(f"./docs/{recipe_slug}")
+    if not os.path.exists(f"./docs/{slug}"):
+        os.makedirs(f"./docs/{slug}")
 
-    with open(f"./docs/{recipe_slug}/index.html", "w+") as f:
-        f.write(recipe_page)
+    with open(f"./docs/{slug}/index.html", "w+") as f:
+        f.write(page)
