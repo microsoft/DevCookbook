@@ -142,12 +142,20 @@ body > header h1 {
     margin-bottom: 2rem;
 }
 
-body > header img {
-    max-width: 20rem;
-    margin: auto;
+.call-to-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
 }
 
-.call-to-action {
+.call-to-action > img {
+    max-width: 10rem;
+    margin-bottom: 1rem;
+}
+
+.call-to-action > a {
     font-family: "Castoro", "Times New Roman", Times, serif;
     font-size: 2rem;
     text-decoration: underline;
