@@ -1,7 +1,7 @@
 ---
 name: [Full Name]
 residence: [City, country]
-category: {appetizer, entrée, dessert, other}
+category: {appetizer, entree, dessert, other}
 ---
 
 # [Recipe Name]
