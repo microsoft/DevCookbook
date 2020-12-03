@@ -142,6 +142,10 @@ body > header h1 {
     margin-bottom: 2rem;
 }
 
+body > header img {
+    max-width: 20rem;
+}
+
 .call-to-action {
     display: flex;
     flex-direction: column;
