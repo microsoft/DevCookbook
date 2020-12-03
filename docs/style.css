@@ -1,6 +1,6 @@
 /* Import Castoro */
 
-@import url("https://fonts.googleapis.com/css2?family=Castoro:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Castoro:ital@1&family=Roboto:wght@400;500&display=swap");
 
 /* Unset values */
 
@@ -47,10 +47,12 @@
 /* Globals */
 
 html {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Segoe UI", "Roboto", sans-serif;
     font-size: 16px;
     color: var(--text-primary);
     background-color: var(--background);
+    -webkit-font-smoothing: subpixel-antialiased;
+    -webkit-text-stroke: 1px transparent;
 }
 
 img {
@@ -107,6 +109,8 @@ ol {
 blockquote {
     quotes: "“" "”" "‘" "’";
     font-family: "Castoro", "Times New Roman", Times, serif;
+    font-weight: 400;
+    font-style: italic;
 }
 
 blockquote::before {
@@ -161,6 +165,8 @@ body > header img {
 
 .call-to-action > a {
     font-family: "Castoro", "Times New Roman", Times, serif;
+    font-weight: 400;
+    font-style: italic;
     font-size: 2rem;
     text-decoration: underline;
 }
@@ -293,7 +299,9 @@ section.recipe {
 
 section.recipe .illustration {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin-bottom: 2rem;
 }
 
