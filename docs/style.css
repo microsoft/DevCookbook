@@ -41,7 +41,7 @@
     --text-primary: var(--neutral-90);
 
     /* Shadow */
-    --shadow: var(--neutral-60) 0px 0.25rem 0.5rem;
+    --shadow: var(--neutral-10) 0px 0.25rem 0.5rem;
 }
 
 /* Globals */
@@ -176,6 +176,7 @@ body > header img {
 section {
     max-width: 60rem;
     margin: 0 auto;
+    padding: 0 0.5rem;
 }
 
 section > header {
@@ -294,7 +295,6 @@ section.table-of-contents {
 section.recipe {
     max-width: 50rem;
     margin: 3rem auto;
-    padding: 0 0.5rem;
 }
 
 section.recipe .illustration {
@@ -333,4 +333,33 @@ section.recipe > .credit {
 
 .lists h2 {
     margin-bottom: 0.5rem;
+}
+
+/* Contribute */
+
+.markdown-example {
+    background: var(--neutral-0);
+    border-radius: 0.25rem;
+    box-shadow: var(--shadow);
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    max-width: 90ch;
+}
+
+.markdown-example span {
+    display: flex;
+    background: var(--neutral-10);
+    border-radius: 0.25rem 0.25rem 0 0;
+    padding: 0.5rem;
+    font-weight: 500;
+    width: 100%;
+}
+
+.markdown-example pre {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    padding: 0.5rem;
 }
