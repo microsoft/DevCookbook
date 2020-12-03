@@ -3,8 +3,68 @@
     <a href="/"><strong>Open Source</strong> Kitchen</a>
     <a href="">Contribute a recipe!</a>
 </nav>
-<section>
+<section class="contribute">
     <h2>Thinking of contributing a recipe to Dev Cookbook? Here's how!</h2>
     <p></p>
+    <div class="markdown-example">
+        <span
+            ><a
+                href="https://github.com/microsoft/DevCookbook/blob/main/Template.md"
+                >Template.md</a
+            ></span
+        >
+        <pre><code>---
+name: [Full Name]
+residence: [City, country]
+category: {appetizer, entree, dessert, other}
+---
+
+# [Recipe Name]
+
+> [Quote]
+
+## Ingredients
+
+## Directions
+
+</code></pre>
+    </div>
+    <div class="markdown-example">
+        <span
+            ><a
+                href="https://github.com/microsoft/DevCookbook/blob/main/recipes/Pie%20Shell%20Script.md"
+                >Pie Shell Script.md</a
+            ></span
+        >
+        <pre><code>---
+name: Thomas Eckert
+residence: Seattle, WA, USA
+category: dessert
+---
+
+# Pie Shell Script
+
+> The perfect shell is as important for pie as it is for code.
+
+## Ingredients
+
+- 300 g all purpose flour
+- 5/8 tsp salt
+- 175 g cold butter
+- 2 tbsp. cold water
+
+## Directions
+
+1. Stir together flour and salt.
+2. Cut cold butter into pea-sized pieces (or use a cheese grater) and mix thoroughly into the dry ingredients.
+3. Sprinkle 1 to 2 tbsp. cold water over part of the mixture, gently toss with a fork.
+4. Form the mixture into a ball and place on a lightly floured surface.
+5. Using a rolling pin, flatten from center to edges until the dough is 12 inches (30 cm) in diameter.
+6. Carefully transfer the dough to a 9 inch (22 cm) pie plate.
+7. Crimp the edge of the dough as desired.
+8. Fill the shell with a pie filling of your choice!
+
+        </code></pre>
+    </div>
 </section>
 {% endblock content %}
