@@ -7,7 +7,7 @@ def test_recipe_slug():
     name = "Thomas Eckert"
     residence = "Seattle, WA"
     category = RecipeCategory("dessert")
-    recipe_name = "Pie Shell Script"
+    recipe_name = '"Pie" Shell Script'
     quote = "Hello, World"
     ingredients = [""]
     instructions = [""]
