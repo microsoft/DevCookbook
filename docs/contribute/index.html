@@ -7,19 +7,41 @@
         <link rel="stylesheet" href="/DevCookbook/style.css" />
         <link
             rel="shortcut icon"
-            href="images/favicon.png"
+            href="illustrations/bowl-spice.png"
             type="image/x-icon"
         />
-        <title>Microsoft Dev Cookbook</title>
+        <title>Open Source Cookbook</title>
     </head>
     
 <nav>
-    <a href="/"><strong>Open Source</strong> Kitchen</a>
+    <a href="/"><strong>Open Source</strong> Cookbook</a>
     <a href="">Contribute a recipe!</a>
 </nav>
 <section class="contribute">
-    <h2>Thinking of contributing a recipe to Dev Cookbook? Here's how!</h2>
-    <p></p>
+    <blockquote>
+        The Open Source Cookbook was designed for your contribution.
+    </blockquote>
+    <div class="illustration">
+        <img
+            src="illustrations/red-bell-pepper.png"
+            alt="An illustration of a red bell pepper."
+        />
+    </div>
+    <h2>How to contribute</h2>
+    <p>
+        The recipes in the cookbook are built from markdown files in the
+        <a href="https://github.com/microsoft/DevCookbook">GitHub repository</a
+        >. To add a recipe of your own,
+        <a
+            href="https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo"
+            >fork the repository</a
+        >
+        and add a markdown file in the
+        <a href="https://github.com/microsoft/DevCookbook/tree/main/recipes"
+            ><code>recipes</code></a
+        >
+        directory. The markdown file should follow the template below.
+    </p>
     <div class="markdown-example">
         <span
             ><a
@@ -43,6 +65,14 @@ category: {appetizer, entree, dessert, other}
 
 </code></pre>
     </div>
+    <p>
+        As an example, the following markdown file,
+        <a
+            href="https://github.com/microsoft/DevCookbook/blob/main/recipes/Pie%20Shell%20Script.md"
+        >
+            <code>recipes/Pie Shell Script.md</code></a
+        >
+    </p>
     <div class="markdown-example">
         <span
             ><a
@@ -77,9 +107,18 @@ category: dessert
 6. Carefully transfer the dough to a 9 inch (22 cm) pie plate.
 7. Crimp the edge of the dough as desired.
 8. Fill the shell with a pie filling of your choice!
-
         </code></pre>
     </div>
+    <p>
+        gets compiled to <a href="pie-shell-script">this</a>. Be sure to include
+        a programming pun in your recipe's name. When your recipe is ready,
+        <a
+            href="https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork"
+            >make a pull request</a
+        >
+        against the upstream repository. When the pull request is completed, a
+        GitHub Action compiles and deploys the updated site. Bon appetit!
+    </p>
 </section>
 
 </html>
