@@ -60,9 +60,10 @@ img {
 }
 
 nav {
+    font-size: 1.2rem;
     display: flex;
     justify-content: space-between;
-    margin: 0.25rem 1rem;
+    margin: 0.5rem 0.25rem 5rem 0.25rem;
 }
 
 ::selection {
@@ -124,6 +125,10 @@ blockquote::after {
 a {
     text-decoration: none;
     color: var(--text-primary);
+}
+
+p a {
+    text-decoration: underline;
 }
 
 a:hover {
@@ -336,6 +341,29 @@ section.recipe > .credit {
 }
 
 /* Contribute */
+
+section.contribute {
+    max-width: 90ch;
+    margin-bottom: 4rem;
+}
+
+section.contribute > blockquote {
+    font-size: 1.5rem;
+    quotes: none;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+section.contribute > .illustration {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 2rem;
+}
+
+section.contribute > .illustration > img {
+    max-width: 10rem;
+}
 
 .markdown-example {
     background: var(--neutral-0);
