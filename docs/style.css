@@ -270,6 +270,7 @@ section.table-of-contents {
 .recipe-cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+    gap: 1rem;
     max-width: 80rem;
     margin: auto;
     padding: 1rem;
