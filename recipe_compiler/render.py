@@ -29,7 +29,7 @@ def render_home_page(recipes: list[Recipe], env: Environment) -> str:
 
     recipes_by_category = {}
     for recipe in recipes:
-        if recipe.category in recipes_by_category.keys():
+        if recipe.category.value in recipes_by_category.keys():
             recipes_by_category[recipe.category.value].append(recipe)
         else:
             recipes_by_category[recipe.category.value] = [recipe]
