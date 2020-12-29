@@ -58,3 +58,6 @@ You can fork this recipe and change the features in a number of ways. The type o
 11. Divide the mixture between each shell half. Top with about a generous amount of breadcrumbs to coat and grate additional parmesan over the top.
 12. Return stuffed squashes to the oven and bake until heated through, the crumbs are deep golden brown and grated parmesan are melted, about 10 minutes.
 13. Cool briefly before serving. Enjoy!
+
+### BONUS: Squash Commit Ravioli
+> This filling also makes excellent ravioli! If you're fortunate enough to have access to fresh sheet pasta, simply use this filling in place of a different filling recipe, adding 2 tsp - 1 Tbsp per ravioli depending on the desired size. Seal with an egg wash and another sheet of pasta and cut using a ravioli press, fluted dough cutter, or pizza cutter. Cook in a gallon of generously salted boiling water for 2-4 minutes and drain before adding to sauce; a brown butter sage sauce would be ideal here!
