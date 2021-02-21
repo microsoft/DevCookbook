@@ -48,13 +48,18 @@ Makes two 10-12 inch pizzas.
 1. Mix the flour, salt, sugar, and olive oil in a large metal bowl.
 
 If you are mixing by hand: 
+
     1. Mix the ingredients together. 
     2. Knead by hand until all flour is incorporated into a smooth and sticky ball. 
+    
 Else if you are using the mixing paddle attachment: 
+
     1. Mix on low speed for a minute. 
     2. Replace the mixing paddle with the dough hook attachment.
     3. Knead the pizza dough on low to medium speed using the dough hook about 7-10 minutes.
+    
 Else:
+
     Raise warning: 
         You sure you want to mix it that way? 
 
