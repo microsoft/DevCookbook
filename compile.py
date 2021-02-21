@@ -14,11 +14,13 @@ import os
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
-    "-t", "--target", help="The target for compilation ['dev','prod']", required=True
+    "--prod", help="Create github pages compatible format when rendering", required=False, action="store_true"
 )
 
 if __name__ == "__main__":
-    target = parser.parse_args().target
+    target = "dev"
+    if parser.parse_args().prod:
+        target = "prod"
 
     # Read
     recipe_files = glob.glob("./recipes/*.md")

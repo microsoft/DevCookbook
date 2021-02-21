@@ -82,8 +82,13 @@ pip install -r requirements.txt
 ## Compile and run the site locally
 
 ``` bash
-python compile.py -t dev
+python compile.py
 ```
+
+> If you are building this for Github Pages, use the `--prod` flag to correctly link CSS in the rendered output
+> ```bash
+> python compile.py --prod
+> ```
 
 This will output the HTML and CSS that make up the static site in the `docs` directory.
 
