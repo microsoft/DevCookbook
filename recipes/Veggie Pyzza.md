@@ -91,4 +91,3 @@ Else:
 16. Take pizza out of oven. 
 17. Add pesto and arugula as a final touch. 
 18. Use remaining sauce to dip pizza. 
-
