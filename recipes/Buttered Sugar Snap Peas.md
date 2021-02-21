@@ -1,7 +1,7 @@
 ---
 name: Ron Copeland
 residence: Portland, OR, USA
-category: side
+category: appetizer
 ---
 
 # Buttered Sugar Snap Peas
