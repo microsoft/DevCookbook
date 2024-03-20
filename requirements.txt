@@ -1,7 +1,7 @@
 appdirs==1.4.4
 atomicwrites==1.4.0
 attrs==20.2.0
-black==20.8b1
+black==24.3.0
 click==7.1.2
 colorama==0.4.4
 iniconfig==1.1.1
